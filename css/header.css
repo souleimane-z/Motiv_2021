@@ -1,0 +1,145 @@
+
+
+.header {
+    height: 450px;
+    width: 100%;
+    background: #221818;
+    position: relative;
+
+}
+.header_texture{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/office.png) center no-repeat;
+    background-size: cover;
+    z-index: 1;
+    opacity: 0.6; 
+}
+.header_mask{
+    position: absolute;
+    bottom: 0;
+    background: 0 0;
+    height: 42px;
+    width: 100%;
+    z-index: 10;
+}
+.header_navbar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header_navbar_nom_titre{
+    color: #fff;
+    font-weight: 800;
+    font: 32px 'theboldfont';
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: double;
+}
+
+.header_navbar_menu_link {
+    margin-left: 40px;
+    color: #fff;
+    text-decoration: none;
+}
+.header_slogan{ 
+    text-align: center;
+    margin-top: 65px;
+}
+.header_slogan_texte{
+    color: #fff;
+    text-transform: uppercase;
+    
+}
+h1.header_slogan_texte{
+    font: 55px 'Anton';
+    letter-spacing: 1.5px;
+    word-spacing: 7px;
+}
+.header_slogan-btn{
+    color: #fff;
+    text-decoration: none;
+    background: #392828;
+    letter-spacing: 1.5px;
+    padding: 10px 20px;
+    border-radius: 3.8px;
+    font: 25px 'Anton';
+    text-transform: uppercase;
+}
+
+
+
+.h_navbar-toggle {
+    width: 40px;
+    height: 66px; 
+    display: flex;
+    align-items: center;
+   float: right;
+   display: none;
+   cursor: pointer;
+}   
+
+span.h_navbar-toggle-icons, span.h_navbar-toggle-icons:before, span.h_navbar-toggle-icons:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background: #fff;
+    position: relative;
+}
+.h_navbar-toggle-icons:before {top: 10px;}
+.h_navbar-toggle-icons:after {top: -14px;}
+
+
+.is-open .header_navbar_menu{
+    transform: translateY(0);
+}
+
+
+
+@media only screen and (max-width: 933px){
+    .container{
+        width: 100%;
+        padding: 0 20px;
+        
+    }
+    .h_navbar-toggle {
+        display: flex;
+        z-index: 99;
+        
+    }
+    .header_navbar_menu {
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        
+        width: 100vw;
+        height: 100vh;
+        background: #221818;
+        top: 0; left: 0;
+    }
+    .header_navbar_menu_link{
+        margin: 20px 0;
+        font-size: 26px;
+        
+    }
+    h1.header_slogan_texte{font-size: 40px;} 
+    .header_slogan-btn {
+        font-size: 20px;
+        padding: 8px 15px;
+    }
+
+}

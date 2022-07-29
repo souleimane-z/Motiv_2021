@@ -1,0 +1,65 @@
+.header.header-parcours {
+    height: 380px;
+    width: 100%;
+    background: #221818;
+    position: relative;
+
+}
+.header_texture.header-parcours {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../img/Parcours.png) center no-repeat;
+    background-size: cover;
+    z-index: 1;
+    opacity: 0.6;
+}
+
+.container_parcours{
+        width: 70%;
+        margin: auto;
+        position: relative;
+        padding-top: 27px; 
+}
+
+.parcours-titre-vue{
+    border-bottom: 3px solid #221818;
+line-height: 40px;
+font-weight: 800;
+font-style: italic;
+opacity: 0.7;
+}
+.parcours_texte{
+padding-top: 10px;
+text-align: justify;
+font-weight: 400;
+padding-bottom: 40px;
+line-height: 25px;
+font-size: 15px;
+}
+.Professionnel, .Scolaire{
+    column-count: 3;
+    } 
+
+    h4 {
+        background-color: #888888;
+        color: #091f19af;
+        font-size: 18px;
+        text-transform: uppercase;
+        font-weight:bold; 
+     font-style: italic;
+    }
+
+    @media only screen and (max-width: 1146px){  
+        .Professionnel.Scolaire{
+            column-count: 2;
+            } 
+    }
+
+    @media only screen and (max-width: 1000px){  
+        .Professionnel.Scolaire{
+            display: contents;
+            } 
+    }
